@@ -35,4 +35,19 @@ pipeline {
 			}
 		}
 	}
+	post
+	{
+		always
+		{
+		echo "I am always needed to do things in the post of this stage"
+		}
+		failure
+		{
+		echo "I failed this stage"
+		}
+		sucess
+		{
+		echo "I the build was a success"
+		}
+	}
 }
