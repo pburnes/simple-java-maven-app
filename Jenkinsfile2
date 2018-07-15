@@ -45,7 +45,7 @@ pipeline {
 		{
 		echo "I failed this stage"
 		}
-		sucess
+		success
 		{
 		echo "I the build was a success"
 		}
