@@ -7,6 +7,12 @@ pipeline {
 			{
 			echo "Copy the generate properties file"
 			}
- }
+		}
+		stage("Deploy"){
+			steps
+			{
+			echo "Call cloud formation template script for the deployment of a workstation"
+			}
+		}
 }
 }
