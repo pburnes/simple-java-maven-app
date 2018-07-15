@@ -28,5 +28,20 @@ agent any
 				echo "call script to verify login to SN is possible"
 				}
 		}
-	}	
+	}
+	post
+	{
+		always
+			{
+			echo "I will always post the logs to the BARM and notify the team"
+			}
+		failure
+			{
+			echo "I will post the log to the BARM and notify the team of failure"
+			}
+		success
+			{
+			echo "I will post the versioned image to nexus, the logs to the BARM and notify the team"
+			}
+	}
 }
