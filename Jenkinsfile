@@ -15,7 +15,17 @@ agent any
 		{
 			steps
 				{
-				echo "run TF script that deploys versioned SN onto AMI"
+				echo "run TF of CF script that deploys versioned SN onto AMI"
+				}
+		}
+		stage("Integration Testing")
+		{
+			steps
+				{
+				echo "call script that verify that SN is up and running"
+				}
+				{
+				echo "call script to verify login to SN is possible"
 				}
 		}
 	}	
