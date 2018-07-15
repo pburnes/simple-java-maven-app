@@ -3,9 +3,10 @@ pipeline {
 	
 	stages{
 		stage("Copy in/Generate Properties File"){
-		steps
-		{
-		echo "Copy the generate properties file"
-		}
- 
+			steps
+			{
+			echo "Copy the generate properties file"
+			}
+ }
+}
 }
