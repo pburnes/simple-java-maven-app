@@ -1,18 +1,38 @@
 pipeline {
 	agent any
 	
-	stages{
-		stage("Copy in/Generate Properties File"){
+	stages
+	{
+		stage("Copy in/Generate Properties File")
+		{
 			steps
 			{
 			echo "Copy the generate properties file"
 			}
 		}
-		stage("Deploy"){
+		stage("Deploy")
+		{
 			steps
 			{
 			echo "Call cloud formation template script for the deployment of a workstation"
 			}
 		}
-}
+		stage("Workstation tool configuration")
+		{
+			steps
+			{
+			echo "Run the script that adds the appropriate development tools to the workstation"
+			}
+			{
+			echo "Run the scans against the workstation"
+			}
+		}
+		stage("Validation Testing")
+		{
+			steps
+			{
+			echo "Run the script to verify the workstation is up and running correctly"
+			}
+		}
+	}
 }
