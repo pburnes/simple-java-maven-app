@@ -6,7 +6,7 @@ agent any
 		{
 		stage("Verify AWS is active")
 			{
-			step
+			steps
 				{
 				echo "run script that checks AWS infrastructure is availabile, VPCs, Subnets, etc."
 				}
